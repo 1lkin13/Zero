@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "easymde/dist/easymde.min.css";
-// import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "@/components/ui/toaster";
 
 const workSans = localFont({
   src: [
@@ -56,7 +56,7 @@ const workSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Zero",
+  title: "Zero-Blog Site",
   description: "Zero to Hero together",
 };
 
@@ -66,10 +66,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={workSans.variable}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={workSans.variable} cz-shortcut-listen="true">
         {children}
-        {/* <Toaster /> */}
+        <Toaster />
       </body>
     </html>
   );

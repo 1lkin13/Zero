@@ -14,7 +14,6 @@ export default async function Home({
 
   const session = await auth();
 
-  // console.log(session?.id);
 
   const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
@@ -22,8 +21,8 @@ export default async function Home({
     <>
       <section className="blue_container">
         <h1 className="heading">
-        Find Partners  <br />
-        to Bring Your Idea to Life
+        If you are a smart developer , <br />
+         share the post
         </h1>
 
         <p className="sub-heading !max-w-3xl">
@@ -35,7 +34,7 @@ export default async function Home({
 
       <section className="section_container">
         <p className="text-30-semibold">
-          {query ? `Search results for "${query}"` : "All Ideas"}
+          {query ? `Search results for "${query}"` : "All blog posts"}
         </p>
 
         <ul className="mt-7 card_grid">
@@ -44,7 +43,7 @@ export default async function Home({
               <StartupCard key={post?._id} post={post} />
             ))
           ) : (
-            <p className="no-results">No ideas found</p>
+            <p className="no-results">No post found</p>
           )}
         </ul>
       </section>
