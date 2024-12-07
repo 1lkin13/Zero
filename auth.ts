@@ -9,12 +9,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     async signIn({
       user: { name, email, image },
-      profile: { id, login, bio },
+      profile,
     }) {
+      // Check if profile is defined
+      if (!profile) {
+        return false; // Return false or handle the error case
+      }
+
+      const { id, login, bio } = profile;
+
       const existingUser = await client
         .withConfig({ useCdn: false })
         .fetch(AUTHOR_BY_GITHUB_ID_QUERY, {
-          id
+          id,
         });
 
       if (!existingUser) {
@@ -32,11 +39,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return true;
     },
     async jwt({ token, account, profile }) {
+      // Check if profile is defined
       if (account && profile) {
         const user = await client
           .withConfig({ useCdn: false })
           .fetch(AUTHOR_BY_GITHUB_ID_QUERY, {
-            id: profile?.id,
+            id: profile.id,
           });
 
         token.id = user?._id;
