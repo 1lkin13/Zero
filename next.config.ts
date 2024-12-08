@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  output: 'export',
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [
