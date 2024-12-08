@@ -1,4 +1,4 @@
-import {withSentryConfig} from "@sentry/nextjs";
+import { withSentryConfig } from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -10,17 +10,16 @@ const nextConfig: NextConfig = {
   },
   images: {
     dangerouslyAllowSVG: true,
-    domains: ['avatars.githubusercontent.com'],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "avatars.githubusercontent.com",
+        hostname: "*",
       },
     ],
   },
   experimental: {
     ppr: "incremental",
-    after:true
+    after: true,
   },
   devIndicators: {
     appIsrStatus: true,
@@ -28,7 +27,6 @@ const nextConfig: NextConfig = {
     buildActivityPosition: "bottom-right",
   },
 };
-
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
 // https://github.com/getsentry/sentry-webpack-plugin#options
