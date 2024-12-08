@@ -26,7 +26,7 @@ export default async function Home({
         </h1>
 
         <p className="sub-heading !max-w-3xl">
-        Share Ideas, Vote on Pitches, and Stand Out in Online Competitions.
+        Build, Learn, and Grow as a Developer 🚀
         </p>
 
         <SearchForm query={query} />
