@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Zero-Hub
 
-First, run the development server:
+Zero-Hub: A Developer’s Dream Blog Built with Next.js 15 and Sanity 🚀
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+**Client 🌐:**  
+•	Next.js 15: The core of the application, leveraging the App Router, Streaming, and Server Components for a fast, seamless user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+•	Sanity: A headless CMS providing real-time structured content management. Perfect for managing blog posts, authors, and media.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+•	TailwindCSS: Utility-first CSS framework for building responsive, clean, and modern UIs effortlessly.
 
-## Deploy on Vercel
+•	Shadcn UI: A set of customizable, pre-styled components built on Radix UI—perfect for creating elegant interfaces while maintaining flexibility.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+**Server ⚙️:**  
+ •	Next.js API Routes: Backend logic integrated into the Next.js project using its serverless API architecture.
+
+•	Sanity Studio: Hosted on Sanity, providing a backend for managing all content.
+
+•	Zod: A TypeScript-first schema validation library to ensure data integrity in API routes and components.
+
+## Demo
+
+https://zero-hub.vercel.app/
+
+
+## Picctures
+
+![Screenshot 2024-12-08 164104](https://github.com/user-attachments/assets/b7105622-f73f-4685-a9ea-248a4354a58a)
+
+
+
+
