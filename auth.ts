@@ -11,9 +11,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       user: { name, email, image },
       profile,
     }) {
-      // Check if profile is defined
       if (!profile) {
-        return false; // Return false or handle the error case
+        return false; 
       }
 
       const { id, login, bio } = profile;
