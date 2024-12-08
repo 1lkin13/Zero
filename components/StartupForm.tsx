@@ -38,7 +38,7 @@ const StartupForm = () => {
           description: "Your blog post has been created successfully",
         });
 
-        router.push(`/startup/${result._id}`);
+        router.push(`/post/${result._id}`);
       }
 
       return result;
